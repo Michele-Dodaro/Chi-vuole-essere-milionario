@@ -12,7 +12,7 @@ body {
     background-color: var(--sfondo);
     color: white;
     font-family: sans-serif;
-
+}
 
 .logo-img {
     height: 230px;  /* Grandezza media */
