@@ -13,13 +13,143 @@ body {
     color: white;
     font-family: sans-serif;
 }
+
+/* 1. Colori principali */
+:root {
+    --sfondo: #00001a;
+    --blu-scuro: #001a33;
+    --azzurro: #3498db;
+    --arancio: #ff9900;
+    --oro: #ffd700;
+}
+
+body {
+    margin: 0;
+    background-color: var(--sfondo);
+    color: white;
+    font-family: sans-serif;
+}
 /* sistemare il logo, è brutto */
 
+
 .logo-img {
-    height: 230px;  /* Grandezza media */
-    width: auto; 
+    height: 230px;
+    width: auto;
     display: block;
+    margin: 0 auto; /* Assicura la centratura orizzontale */
+    
+    /* Estetica rifinita */
+    filter: drop-shadow(0 0 10px var(--azzurro));
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
+
+.logo-img:hover {
+    filter: drop-shadow(0 0 20px var(--oro));
+    transform: scale(1.05);
+}
+
+/* Se hai del testo o altri elementi nel container */
+.container p, .container h1 {
+    color: white;
+    font-family: sans-serif;
+    margin: 0; 
+    padding: 10px;
+    border-bottom: 1px solid var(--blu-scuro);
+}
+
+/* 2. Scalata premi (Sinistra) */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.prize {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    background: var(--blu-scuro);
+    border: 1px solid var(--azzurro);
+    /* Forma a freccia */
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+}
+
+.prize.active { 
+    background: var(--arancio);
+     color: black;
+      font-weight: bold; }
+.prize.top { 
+    border-color: var(--oro);
+     color: var(--oro); }
+.prize.done { 
+    opacity: 0.3;
+ }
+
+/* 3. Area gioco (Destra) */
+.game {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.question {
+    width: 80%;
+    padding: 25px;
+    text-align: center;
+    background: var(--blu-scuro);
+    border: 2px solid var(--azzurro);
+    font-size: 1.4rem;
+        /* Forma a freccia */
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 85%;
+}
+
+.opt {
+    background: var(--blu-scuro);
+    border: 1px solid var(--azzurro);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+        /* Forma a freccia */
+    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
+}
+.opt:hover { 
+    background: var(--azzurro); 
+    color: black;
+ }
+ .opt:hover { 
+    transition: background 0.3s, color 0.3s;
+ }
+
+/* Colore delle lettere A, B, C, D */
+.opt span { 
+    color: var(--arancio);
+     margin-right: 10px;
+      font-weight: bold;
+     }
+
+/* Stile quando una risposta è selezionata */
+.opt.active { 
+    background: var(--arancio); 
+    color: black;
+ }
+.opt.active span { 
+    color: black;
+ }
 .container {
     display: flex;
     height: 100vh;
