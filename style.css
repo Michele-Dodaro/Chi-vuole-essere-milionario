@@ -13,10 +13,11 @@ body {
     color: white;
     font-family: sans-serif;
 }
+/* sistemare il logo, è brutto */
 
 .logo-img {
     height: 230px;  /* Grandezza media */
-    width: auto;   /* Mantiene le proporzioni */
+    width: auto; 
     display: block;
 }
 .container {
