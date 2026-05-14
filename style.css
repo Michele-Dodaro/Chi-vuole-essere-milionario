@@ -74,20 +74,21 @@ body {
     margin: 2px 0;
     background: var(--blu-scuro);
     border: 1px solid var(--azzurro);
-    /* Forma a freccia */
-    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+    border-radius: 8px;
 }
 
-.prize.active { 
+.prize.active {
     background: var(--arancio);
-     color: black;
-      font-weight: bold; }
-.prize.top { 
+    color: black;
+    font-weight: bold;
+}
+.prize.top {
     border-color: var(--oro);
-     color: var(--oro); }
-.prize.done { 
+    color: var(--oro);
+}
+.prize.done {
     opacity: 0.3;
- }
+}
 
 /* 3. Area gioco (Destra) */
 .game {
@@ -105,9 +106,8 @@ body {
     text-align: center;
     background: var(--blu-scuro);
     border: 2px solid var(--azzurro);
+    border-radius: 12px;
     font-size: 1.4rem;
-        /* Forma a freccia */
-    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
 }
 
 .answers {
@@ -120,130 +120,34 @@ body {
 .opt {
     background: var(--blu-scuro);
     border: 1px solid var(--azzurro);
+    border-radius: 10px;
     color: white;
     padding: 15px;
     cursor: pointer;
     text-align: left;
-        /* Forma a freccia */
-    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
-}
-.opt:hover { 
-    background: var(--azzurro); 
-    color: black;
- }
- .opt:hover { 
     transition: background 0.3s, color 0.3s;
- }
+}
+.opt:hover {
+    background: var(--azzurro);
+    color: black;
+}
 
 /* Colore delle lettere A, B, C, D */
-.opt span { 
+.opt span {
     color: var(--arancio);
-     margin-right: 10px;
-      font-weight: bold;
-     }
+    margin-right: 10px;
+    font-weight: bold;
+}
 
 /* Stile quando una risposta è selezionata */
-.opt.active { 
-    background: var(--arancio); 
+.opt.active {
+    background: var(--arancio);
     color: black;
- }
-.opt.active span { 
+}
+.opt.active span {
     color: black;
- }
+}
 .container {
     display: flex;
     height: 100vh;
 }
-
-/* 2. Scalata premi (Sinistra) */
-.sidebar {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.prize {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px 0;
-    background: var(--blu-scuro);
-    border: 1px solid var(--azzurro);
-    /* Forma a freccia */
-    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
-}
-
-.prize.active { 
-    background: var(--arancio);
-     color: black;
-      font-weight: bold; }
-.prize.top { 
-    border-color: var(--oro);
-     color: var(--oro); }
-.prize.done { 
-    opacity: 0.3;
- }
-
-/* 3. Area gioco (Destra) */
-.game {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.question {
-    width: 80%;
-    padding: 25px;
-    text-align: center;
-    background: var(--blu-scuro);
-    border: 2px solid var(--azzurro);
-    font-size: 1.4rem;
-        /* Forma a freccia */
-    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
-}
-
-.answers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    width: 85%;
-}
-
-.opt {
-    background: var(--blu-scuro);
-    border: 1px solid var(--azzurro);
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    text-align: left;
-        /* Forma a freccia */
-    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
-}
-.opt:hover { 
-    background: var(--azzurro); 
-    color: black;
- }
- .opt:hover { 
-    transition: background 0.3s, color 0.3s;
- }
-
-/* Colore delle lettere A, B, C, D */
-.opt span { 
-    color: var(--arancio);
-     margin-right: 10px;
-      font-weight: bold;
-     }
-
-/* Stile quando una risposta è selezionata */
-.opt.active { 
-    background: var(--arancio); 
-    color: black;
- }
-.opt.active span { 
-    color: black;
- }

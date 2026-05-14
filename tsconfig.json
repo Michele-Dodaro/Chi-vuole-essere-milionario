@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "strict": true,
+        "lib": ["ES6", "DOM"]
+    },
+    "include": ["script.ts"]
+}
